@@ -9,9 +9,9 @@
 
 - Below, you will find an example to help you get started. Feel free to customize it to match your specific requirements and needs.
 
-# Project Name - Team Number
+# G6 Portfolio - Team 6
 
-A brief description of your web development project.
+A portfolio website, with group of student.
 
 ## Table of Contents
 - [Features](#features)
