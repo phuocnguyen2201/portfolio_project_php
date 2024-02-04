@@ -1,0 +1,73 @@
+
+@media (max-width: 991px){
+    .mt-5{
+        margin-top: 0rem !important;
+    }
+    .vertical{
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-bottom: 2rem;
+    }
+    .btn-secondary{
+        min-width: 100% !important;
+    }
+    .divider{
+        display: block !important;
+        margin: 1px !important;
+    }
+    .checkbtn{
+        margin-right: 0 !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .header{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    .divider{
+        display: block;
+        margin: 0px !important;
+    }
+    .py-5{
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    .pt-3{
+        padding-top: 0rem !important;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .nav-list{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: block;
+        padding-left: 0px;
+        margin-bottom: 5px;
+    }
+    .nav-list .has-children{
+        display: block;
+    }
+
+    .menu{
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    #check:checked ~ .nav-list{
+        left: 0;
+        background-color: #FDC822;
+        max-height: 100%;
+    }
+
+}
+@media (max-width: 576px){
+    .menu{
+        max-width: 540px;
+    }
+}

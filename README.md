@@ -1,6 +1,13 @@
 # Exercise 5: Readme.md
 
-# Important note: if you see the note [Draft], it mean the feature it not yet confirmed is possible to implement.
+***Welcome to the task README!***
+
+- You are required to create ´Readme.md´ in your project directory to document your activities throughout the project's lifecycle. 
+- You will regularly update it to monitor the ongoing development of the project. 
+
+- You will start by outlining the planned features, task assignments to team members and document the evolving progress of your work. 
+
+- Below, you will find an example to help you get started. Feel free to customize it to match your specific requirements and needs.
 
 # G6 Portfolio - Team 6
 
@@ -18,33 +25,23 @@ A portfolio website, with group of student.
 
 In this section, list and describe the features or functionality that you are working on. You can use checkboxes to track the progress of each feature.
 
-- [ ] Login : Authentication for the site. [Draft]
-- [ ] Manage information: Modification for team section. Add/remove team member information.
-- [ ] Inquiry form: manage the information from the client.
-- [ ] Manage site: to create new page without touching the code.
+- [ ] Feature 1 (Full Name): Title of the feature. 
+- [ ] Feature 2 (Full Name): Title of the feature.
+- [ ] Feature 3 (Full Name): Title of the feature.
 
 > Add features as required. 
 
-### Login
+### Feature 1
 
-Some part/ section of the website would only can be access by internal member. The feature contain:
-- Login.
-- Logout.
-- Using cookie.[Draft].
+Include more detailed information about Feature 1 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
-### Manage information
+### Feature 2
 
-Allow usr to modification information of team member such as:
-- Name.
-- Skills.
-- Description.
-- Image. [Draft]
+Include more detailed information about Feature 2 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
-### Inquiry form
+### Feature 3
 
-The purpose is to reach client when they leave their information:.
-- Client send their information.
-- Member will be manage to see their information.
+Include more detailed information about Feature 3 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
 ---
 

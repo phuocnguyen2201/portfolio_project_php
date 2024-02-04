@@ -1,0 +1,137 @@
+/* 
+    mainThemeColor: #FDC822
+    secondThemeColor: #E08E14
+*/
+
+*{
+    font-family: 'Inter', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: calc(16px * 1.5);
+}
+
+body{
+    background-color: #252525;
+}
+.header{
+    background-color: #FDC822;
+    width: 100%;
+}
+.content{
+    background-color: #FDC822;
+}
+.content-white{
+    background-color: white;
+}
+.content-black{
+    background-color: black;
+}
+.content-orange{
+    background-color: #E08E14;
+
+}
+
+.main{
+    background-color: black;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list .has-children{
+    display: inline-block;
+    padding: 0rem 0.5rem;
+}
+
+.has-children a{
+    color: black;
+    text-decoration-line: none;
+    font-weight: 700;
+    font-size: larger;
+    padding: 0rem calc((100vw - 2000px)/2);
+}
+
+.has-children:hover .dropdown-content {
+    display: block;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+}
+.title-white{
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
+
+.btn-normal{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight:500;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+}
+
+.btn-normal:hover{
+    background-color: #FDC822;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn-bottom{
+    padding: 5px;
+    min-width: 300px;
+    border: white 1px solid;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 40px;
+
+}
+.btn-bottom:hover{
+    border: 1px solid black;
+}
+.vertical{
+    display: flex;
+    align-items: center;
+}
+
+.divider{
+    background-color: black;
+    display: none;
+}

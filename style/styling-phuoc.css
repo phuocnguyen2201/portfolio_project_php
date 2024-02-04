@@ -1,0 +1,86 @@
+.btn-secondary{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight:500;
+    min-width: 250px;
+    min-height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+}
+.btn-secondary:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.vertical{
+    display: flex;
+    align-items: center;
+}
+
+.divider{
+    background-color: black;
+    display: none;
+}
+
+.square-thumbnail{
+    width: auto;
+    max-width: 306px;
+    max-height: 306px;
+}
+
+.square-social-logo{
+    width: 100%;
+    max-width: 150px;
+}
+
+.skill-list{
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.skill-list li{
+    margin-right: 10px;
+}
+
+.title-h2{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+.italic{
+    font-style: italic;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0.25rem;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.sub-menu{
+    list-style-type: none;
+    padding-left: 0;
+}
+
