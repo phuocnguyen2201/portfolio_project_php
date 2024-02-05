@@ -42,9 +42,10 @@ Edit team member information on team page.
 
 List the database tables that are part of your project. 
 
-- Table 1 (Created By): account
-- Table 2 (Created By): Table Name 
-- Table 3 (Created By): Table Name 
+- Table 1 (Created By Phuoc): account
+- Table 2 (Created By Phuoc): users 
+- Table 3 (Created By Phuoc): skills
+- Table 4 (Created By Phuoc): title 
 
 > Include the ER Diagram of the database. 
 
@@ -55,6 +56,10 @@ List the database tables that are part of your project.
 List and describe any forms that have been created as part of your project. Include details about the purpose of each form and any validation logic.
 
 - Form 1 (Created By): Leave inquiry: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+
+- Form 2 (Created By Phuoc Ng): Login: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+
+- Form 3 (Created By Phuoc Ng): Edit information: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
 
 
 ---
