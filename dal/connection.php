@@ -1,24 +1,41 @@
 <?php 
 
-function connect_and_query($query){
+function connection(){
     try{
-        $conn = mysqli_connect("host.docker.internal", "root", "password", "testing","6034");
+
+        $server = 'localhost';
+        $user = 'phuoc23000';
+        $password = 'Pw87FLyU';
+        $database = 'wp_phuoc23000';
+
+        $conn = mysqli_connect($server, $user, $password, $database);
 
         if(mysqli_connect_error()){
             echo mysqli_connect_error();
             die("");
         }
-    
-        $result = $conn->query($query);
-
-        return $result;
+        return $conn;
     }
     catch (Exception $e){
         echo $e->getMessage();
     }
-    finally{
-        $conn->close();
-    }
 }
-  
+
+function exec_query($query){
+    if(connection()->query($query) === true){
+        echo "<script>console.log('Success')</script>";
+    }
+    else
+    {
+        echo "Error: " . $query . "<br>" . connection()->error;
+    }
+    connection()->close();
+}
+
+function exec_select($query){
+    $result = connection()->query($query);
+    return $result;
+
+    connection()->close();
+}
 ?>
