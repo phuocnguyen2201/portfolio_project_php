@@ -43,11 +43,12 @@ Edit team member information on team page.
 List the database tables that are part of your project. 
 
 - Table 1 (Created By Phuoc): account
-- Table 2 (Created By Phuoc): users 
+- Table 2 (Created By Phuoc): users [MERGED within account table]
 - Table 3 (Created By Phuoc): skills
-- Table 4 (Created By Phuoc): title 
+- Table 4 (Created By Phuoc): title [MERGED within account table]
 
 > Include the ER Diagram of the database. 
+<img width="818" alt="Screenshot 2024-02-06 at 11 31 34" src="https://github.com/phuocnguyen2201/portfolio_project_php/assets/18252718/0e27a1bc-3c9c-4c10-8a23-f43c95e0eca7">
 
 ---
 
