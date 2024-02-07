@@ -1,47 +1,24 @@
 <?php
-    function render_picture(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['formFile'])){
-
-            $receivedData   = $_GET['username'];
-            $user           = $_GET['alt'];
-            $fileName       = $_FILES['file']['name'];
+    
+    function upate_info(){
+        if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-edit-information'])){
+            $receivedData       = $_GET['username'];
+            $id                 = $_GET['id'];
+            $first_name         = $_POST['firstname'];
+            $last_name          = $_POST['lastname'];
+            $description        = $_POST['description'];
+            $title              = $_POST['title'];
             
-            $fileTmpName    = $_FILES['file']['tmp_name'];
-            $fileSize       = $_FILES['file']['size'];
-            $fileError      = $_FILES['file']['error'];
-            $fileType       = $_FILES['file']['type'];
-
-            $fileExt = explode('.', $fileName);
-            $fileActualExt = strtolower(end($fileExt));
-
-            $allowed = array('jpg', 'jpeg', 'png');
-
-            if(in_array($fileActualExt, $allowed)){
-                if($fileError === 0){
-                    if($fileSize < 10000000){
-
-                        $fileNameNew = "profile".$receivedData.".".$fileActualExt;
-                        $fileDestination = 'image/teams/'.$fileNameNew;
-
-                        move_uploaded_file($fileTmpName, $fileDestination);
-                        
-                        echo "<img class='img-thumbnail' alt='".$user."'s portrait' src='image/teams/".$fileNameNew."'>";
-                    } else {
-                        echo "Your file is too big!";
-                    }
-                } else {
-                    echo "There was an error uploading your file!";
+            exec_query(query_command::remove_user_skill($receivedData));
+            for($i = 1; $i < 5; $i++){
+                if(!empty($_POST['check'.$i])){
+                    exec_query(query_command::update_user_skill(intval($id), $i));
                 }
-            } else {
-                echo "You cannot upload files of this type!";
             }
-        }
-        else{
-            echo "<img class='img-thumbnail' alt='Phuoc's portrait' src='image/teams/phuoc.jpg'>";
-        
+            exec_query(query_command::update_user_info($receivedData, $first_name, $last_name, urlencode($description), $title));
         }
     }
-
+    
     function render_info_form(){
         $receivedData = $_GET['username'];
         if($receivedData != null){
@@ -65,7 +42,7 @@
                     <div class='form-group row pb-3'>
                         <label for='inputDescription' class='col-sm-3 col-form-label'>Description:</label>
                         <div class='col-sm-8'>
-                            <textarea class='form-control' id='inputDescription' rows='3'>".$row['description']."</textarea>
+                            <textarea class='form-control' name='description' id='inputDescription' rows='3'>".urldecode($row['description'])."</textarea>
                         </div>
                     </div>
                     <div class='form-group row pb-3'>
@@ -92,23 +69,47 @@
                         <label for='inputDescription' class='col-sm-3 col-form-label'>Skills:</label>
                         <div class='col-sm-8'>
                             <div class='form-check form-check-inline'>
-                                <input class='form-check-input' type='checkbox' id='inlineCheckbox1' value='option1' ".(isChecked("Planning", $selectedValues)?'checked' : '').">
-                                <label class='form-check-label' for='inlineCheckbox1'>Planning</label>
+                                <input class='form-check-input' type='checkbox' id='inlineCheckbox1' name='check1' value='1' ".(isChecked("Coding", $selectedValues)?'checked' : '').">
+                                <label class='form-check-label' for='inlineCheckbox1'>Coding</label>
                                 </div>
                             <div class='form-check form-check-inline'>
-                                <input class='form-check-input' type='checkbox' id='inlineCheckbox2' value='option2' ".(isChecked("Coding", $selectedValues)?'checked' : '').">
-                                <label class='form-check-label' for='inlineCheckbox2'>Coding</label>
+                                <input class='form-check-input' type='checkbox' id='inlineCheckbox2' name='check2' value='2' ".(isChecked("Planning", $selectedValues)?'checked' : '').">
+                                <label class='form-check-label' for='inlineCheckbox2'>Planning</label>
                             </div>
                             <div class='form-check form-check-inline'>
-                                <input class='form-check-input' type='checkbox' id='inlineCheckbox3' value='option3' ".(isChecked("Game Design", $selectedValues)?'checked' : '').">
-                                <label class='form-check-label' for='inlineCheckbox3'>Game Design</label>
+                                <input class='form-check-input' type='checkbox' id='inlineCheckbox3' name='check3' value='3' ".(isChecked("Design", $selectedValues)?'checked' : '').">
+                                <label class='form-check-label' for='inlineCheckbox3'>Design</label>
                             </div>
                             <div class='form-check form-check-inline'>
-                                <input class='form-check-input' type='checkbox' id='inlineCheckbox4' value='option4' ".(isChecked("Design", $selectedValues)?'checked' : '').">
-                                <label class='form-check-label' for='inlineCheckbox4'>Design</label>
+                                <input class='form-check-input' type='checkbox' id='inlineCheckbox4' name='check4' value='4' ".(isChecked("Game Design", $selectedValues)?'checked' : '').">
+                                <label class='form-check-label' for='inlineCheckbox4'>Game Design</label>
                             </div>
                         </div>
                     </div>";
+            }
+            else{
+                echo " 
+                <div class='form-group row pb-3'>
+                    <label for='inputDescription' class='col-sm-3 col-form-label'>Skills:</label>
+                    <div class='col-sm-8'>
+                        <div class='form-check form-check-inline'>
+                            <input class='form-check-input' type='checkbox' id='inlineCheckbox1' name='check' value='1'>
+                            <label class='form-check-label' for='inlineCheckbox1'>Coding</label>
+                            </div>
+                        <div class='form-check form-check-inline'>
+                            <input class='form-check-input' type='checkbox' id='inlineCheckbox2' name='check' value='2'>
+                            <label class='form-check-label' for='inlineCheckbox2'>Planning</label>
+                        </div>
+                        <div class='form-check form-check-inline'>
+                            <input class='form-check-input' type='checkbox' id='inlineCheckbox3' name='check' value='3'>
+                            <label class='form-check-label' for='inlineCheckbox3'>Design</label>
+                        </div>
+                        <div class='form-check form-check-inline'>
+                            <input class='form-check-input' type='checkbox' id='inlineCheckbox4' name='check' value='4'>
+                            <label class='form-check-label' for='inlineCheckbox4'>Game Design</label>
+                        </div>
+                    </div>
+                </div>";
             }
         }
         else{

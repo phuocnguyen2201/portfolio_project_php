@@ -9,16 +9,16 @@
     <meta name="description" content="Exploring your future wonderful highly skilled freelancer.">
     <title><?php echo $title?></title>
 
-    <link rel="icon" type="image/x-icon" href="/portfolio_project_php/image/favicon_io/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="image/favicon_io/favicon.ico">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="/portfolio_project_php/style/styles.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio_project_php/style/header.css">
-    <link rel="stylesheet" type="text/css" href="/portfolio_project_php/style/styling-phuoc.css">
+    <link rel="stylesheet" type="text/css" href="style/styles.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+    <link rel="stylesheet" type="text/css" href="style/styling-phuoc.css">
     <script src="https://kit.fontawesome.com/192e3b220b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,7 +28,7 @@ crossorigin="anonymous"></script>
                 <div class="row"> 
                     <nav class="menu">
                         <div class="logo">
-                            <a href="home.php"><img class="header-logo" alt="G6 Portfolio Logo" src="/portfolio_project_php/image/favicon_io/header-favicon-32x32.png"></a>
+                            <a href="home.php"><img class="header-logo" alt="G6 Portfolio Logo" src="image/favicon_io/header-favicon-32x32.png"></a>
                         </div>
                         <input type="checkbox" id="check">
                         <label for="check" class="checkbtn">
@@ -50,10 +50,10 @@ crossorigin="anonymous"></script>
                                 </li>
 
                                 <?php
-                                    if(isset($_COOKIE['username'])){
+                                    if(isset($_COOKIE['user'])){
                                         echo "
                                         <li role='menuitem' aria-haspopup='true' class='has-children'>
-                                            <a href='#'>Hi! ".$_COOKIE['username']."</a>
+                                            <a href='#'>Hi! ".$_COOKIE['user']."</a>
                                             <div class='dropdown-content'>
                                                 <ul class='sub-menu' role='menu' aria-expanded='true'>
                                                     <li role='menuitem'> <a class='dropdown-item' href='#'>Manage</a></li>

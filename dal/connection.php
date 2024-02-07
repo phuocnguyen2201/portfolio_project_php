@@ -3,10 +3,10 @@
 function connection(){
     try{
 
-        $server = 'localhost';
-        $user = 'phuoc23000';
-        $password = 'Pw87FLyU';
-        $database = 'wp_phuoc23000';
+        $server = 'db';
+        $user = 'root';
+        $password = 'password';
+        $database = 'testing';
 
         $conn = mysqli_connect($server, $user, $password, $database);
 
