@@ -20,6 +20,7 @@ In this section, list and describe the features or functionality that you are wo
 - [x] Manage information (Phuoc).
 - [x] Manage inquiry information (Aleksei Ossipov).
 - [ ] Create account (Trang).
+- [ ] Update account (Sieng).
 - [ ] Search (Draft, if times is allowed us, we will do).
 
 > Add features as required. 
@@ -40,6 +41,10 @@ Edit team member information on team page.
 ### Create account.
 
 Create new account for new member.
+
+### Update account.
+
+Allow user to change password.
 
 ---
 
