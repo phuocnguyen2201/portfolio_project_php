@@ -36,8 +36,10 @@ Edit team member information on team page.
 
 - Client send information.
 - View information sent by client.
-.
+- 
+### Create account.
 
+Create new account for new member.
 ---
 
 ## Database Tables
