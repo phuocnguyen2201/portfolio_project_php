@@ -1,6 +1,6 @@
 <?php 
 
-    $title ='About us | Portfolio';
+    $title ='About us';
     $hero_title = "About us";
     $description = "We are at the leader of innovation using data and technology to grow the human capital management space, with solutions that help employers find, hire, manage great people and the most suitable persons.";
 
