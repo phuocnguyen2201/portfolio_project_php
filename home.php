@@ -23,8 +23,9 @@
             if($result->num_rows > 0){
                 echo "<div class='row text-center'>";
                 while($row = $result->fetch_assoc()){
+                    $alt = urldecode($row['alt_text']);
                     echo "<div class='col-lg-3 col-md-12 mb-4'>
-                                <a href='team.php#{$row['username']}'><img class='img-thumbnail square-thumbnail' alt='{$row['alt_text']}' src='image/teams/{$row['image_url']}'></a>
+                                <a href='team.php#{$row['username']}'><img class='img-thumbnail square-thumbnail' alt=\"$alt\" src='image/teams/{$row['image_url']}'></a>
                                 <a class='card-link' href='team.php#{$row['username']}'><h1>".$row['first_name']." ".$row['last_name']."</h1></a>
                         </div>";
                 }

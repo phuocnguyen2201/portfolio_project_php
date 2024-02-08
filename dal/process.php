@@ -30,7 +30,6 @@
         $last_name          = $_POST['lastname'];
         $description        = $_POST['description'];
         $title              = $_POST['title'];
-        $checkbox           = $_POST['check'];
 
         update_info($receivedData, $id, $first_name, $last_name, $description, $title);
     } 
