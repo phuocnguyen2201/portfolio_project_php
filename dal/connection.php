@@ -6,7 +6,7 @@ function connection(){
         $server = 'db';
         $user = 'root';
         $password = 'password';
-        $database = 'trang_db';
+        $database = 'phuoc';
 
         $conn = mysqli_connect($server, $user, $password, $database);
 
