@@ -15,9 +15,9 @@
 
         $username = $_POST['create-username'];
         $password = $_POST['create-password'];
-        //echo $username;
-        //echo $password;
-        create_account($username, $password);
+        
+        if(!empty($username) && !empty($password))
+            create_account($username, $password);
     }
 
     //For request from edit form.
