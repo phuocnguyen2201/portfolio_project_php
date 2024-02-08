@@ -1,4 +1,15 @@
 <?php
+    //For request from login form.
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-login'])){
+        include_once "../index.php";
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        login($username, $password);
+    }
+
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-create-account'])){
         include_once "account.php";
 

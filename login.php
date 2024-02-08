@@ -20,7 +20,7 @@
                     else{
                         echo "
                         <h1 class='text-center'>Login</h1>
-                        <form class='py-3' name='form-login' method='POST'>
+                        <form class='py-3' action='dal/process.php' name='form-login' method='POST'>
                         <div class='form-group row pb-3'>
                             <label for='inputUserName' class='col-sm-3 col-form-label'>User Name:</label>
                             <div class='col-sm-8'>
@@ -39,12 +39,16 @@
                             <div class='col-sm-8'><input class='btn-bottom' type='submit' name='form-login' value='Submit'></div>
                         </div>
                     </form>";
+                        $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
+                        if(!empty($msg) && $msg == 'invalid'){
+                            echo "<h1 class='text-center'>Invalid username or password</h1>";
+                        }
                     }
                 ?>
             </div>
             <div class="col-lg-6 right-border">
                 <h1 class='text-center'>Don't have account yet?</h1>
-                    <form class='py-3' name='form-create-account' method='POST'>
+                    <form class='py-3' action="dal/process.php" name='form-create-account' method='POST'>
                     <div class='form-group row pb-3'>
                         <label for='inputUserName' class='col-sm-3 col-form-label'>User Name:</label>
                         <div class='col-sm-8'>

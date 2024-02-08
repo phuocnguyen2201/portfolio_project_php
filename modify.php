@@ -18,8 +18,21 @@
 
         <div class="row">
                 <div class="col-lg-4 text-center">
-                    <?php render_picture();?>
+                    
                     <form name="formFile" method="post" enctype="multipart/form-data">
+                    <?php
+
+                        $receivedData = isset($_GET['username']) ? $_GET['username'] : '';
+                        $id = isset($_GET['id']) ? $_GET['id'] : '';
+
+                        upload_image();
+
+                        $result = exec_select(query_command::query_user_info($receivedData));
+                        if($result->num_rows > 0){
+                            $row = $result->fetch_assoc();
+                            $alt = urldecode($row['alt_text']);
+                            echo "<img class='img-thumbnail' alt=\"$alt\" src='image/teams/".$row['image_url']."'>";
+                    }?>
                         <label for="formFile" class="form-label">Image</label>
                         <input class="form-control form-control-lg" name='file' id="formFile" type="file" accept=".jpg,.jpeg,.png">
 
@@ -37,7 +50,6 @@
                     <form class='py-3' name='form-edit-information' method='POST'>
                         <?php 
                             render_info_form();
-                            upate_info();
                         ?>
                         <br>
                         <div class='form-group row' style='text-align: left;'>
