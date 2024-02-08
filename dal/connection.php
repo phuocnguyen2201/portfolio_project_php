@@ -22,11 +22,7 @@ function connection(){
 }
 
 function exec_query($query){
-    if(connection()->query($query) === true){
-        echo "<script>console.log('Success')</script>";
-    }
-    else
-    {
+    if(connection()->query($query) !== true){
         echo "Error: " . $query . "<br>" . connection()->error;
     }
     connection()->close();
