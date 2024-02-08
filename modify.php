@@ -9,7 +9,7 @@
     $img_desc = "A pen layover in the notebook and a cup of coffee on the table.";
     $img_url = "image/kelly-sikkema-Lo6OIm82gTs-unsplash.jpg";
 
-    include "extention/header.php";
+    include "extension/header.php";
     include "dal/process.php";
     include "dal/upload_file.php";
 ?>
@@ -62,4 +62,4 @@
             </div>
         </div>
     </div>
-<?php include "extention/footer.php"?>
+<?php include "extension/footer.php"?>

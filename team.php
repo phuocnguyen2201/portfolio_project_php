@@ -8,7 +8,7 @@
 
     $img_url = "image/jason-goodman-Oalh2MojUuk-unsplash.jpg";
     $img_decs = "colleagues in a meeting";
-    include "extention/header.php"?>
+    include "extension/header.php"?>
 
     <div class="content-white">
         

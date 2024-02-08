@@ -8,7 +8,7 @@
 
     $img_desc = "A man sitting on the rooftop and working with his laptop";
     $img_url = "image/avi-richards-Z3ownETsdNQ-unsplash.jpg";
-    include "extention/header.php"?>
+    include "extension/header.php"?>
     <div class="content-white py-5">
     <div class="container-lg">
         <div class="row">
@@ -71,4 +71,4 @@
         </div>
     </div>
 </div>
-<?php include "extention/footer.php"?>
+<?php include "extension/footer.php"?>

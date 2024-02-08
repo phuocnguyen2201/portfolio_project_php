@@ -6,7 +6,7 @@
 
     $isNeedButton  = false;
     $img_url = "image/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg";
-    include "extention/header.php"?>
+    include "extension/header.php"?>
         <div class="content-white">
       <div class="container-lg py-5">
         <div class="row pb-5 text-center">
@@ -34,4 +34,4 @@
         </div>
       </div>
     </div>
-<?php include "extention/footer.php"?>
+<?php include "extension/footer.php"?>
