@@ -84,3 +84,10 @@ table, th, td {
     padding-left: 0;
 }
 
+.error_alert{
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+}

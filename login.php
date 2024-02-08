@@ -20,17 +20,19 @@
                     else{
                         echo "
                         <h1 class='text-center'>Login</h1>
-                        <form class='py-3' action='dal/process.php' name='form-login' method='POST'>
+                        <form class='py-3' action='dal/process.php' name='form-login' id='form-login' method='POST'>
                         <div class='form-group row pb-3'>
                             <label for='inputUserName' class='col-sm-3 col-form-label'>User Name:</label>
                             <div class='col-sm-8'>
                             <input type='text' name='username' class='form-control' id='inputUserName'>
+                            <div id='nameError' class='error_alert'>Please type something in Username box</div>
                             </div>
                         </div>
                         <div class='form-group row'>
                             <label for='inputPassword' class='col-sm-3 col-form-label'>Password:</label>
                             <div class='col-sm-8'>
                             <input type='password' name='password' class='form-control' id='inputPassword'>
+                            <div id='passError' class='error_alert'>Please type something in Password box</div>
                             </div>
                         </div>
                         <br>
