@@ -1,5 +1,12 @@
 <?php
-    
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-create-account'])){
+        include_once "account.php";
+
+        $username = $_POST['create-username'];
+        $password = $_POST['create-password'];
+
+        create_account($username, $password);
+    }
     function upate_info(){
         if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-edit-information'])){
             $receivedData       = $_GET['username'];

@@ -4,6 +4,10 @@
     public static $select_All_Inquiry = "SELECT * FROM inquiry";
     public static $select_All_Skills = "SELECT * FROM skills";
     public static $select_All_Account = "SELECT * FROM account";
+
+    public static function create_user($username, $password){
+      return "INSERT INTO account (username, password) VALUES ('$username', '$password')";
+    }
     
     public static function query_account($username, $password){
       return "SELECT username, password FROM account where username = '$username' and password = '$password'";
