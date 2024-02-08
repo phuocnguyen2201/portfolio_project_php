@@ -48,13 +48,13 @@
                     <div class='form-group row pb-3'>
                         <label for='inputUserName' class='col-sm-3 col-form-label'>User Name:</label>
                         <div class='col-sm-8'>
-                        <input type='text' name='username' class='form-control' id='inputUserName'>
+                        <input type='text' name='create-username' class='form-control' id='inputUserName'>
                         </div>
                     </div>
                     <div class='form-group row'>
                         <label for='inputPassword' class='col-sm-3 col-form-label'>Password:</label>
                         <div class='col-sm-8'>
-                        <input type='password' name='password' class='form-control' id='inputPassword'>
+                        <input type='password' name='create-password' class='form-control' id='inputPassword'>
                         </div>
                     </div>
                     <br>

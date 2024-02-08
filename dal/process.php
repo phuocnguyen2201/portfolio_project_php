@@ -4,9 +4,9 @@
 
         $username = $_POST['create-username'];
         $password = $_POST['create-password'];
-        echo $username;
-        echo $password;
-        //create_account($username, $password);
+        //echo $username;
+        //echo $password;
+        create_account($username, $password);
     }
 
     //For request from edit form.
