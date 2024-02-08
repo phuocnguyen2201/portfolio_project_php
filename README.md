@@ -58,8 +58,10 @@ List the database tables that are part of your project.
 - Table 4 (Created By Phuoc): title [MERGED within account table]
 - Table 5 (Created By Aleksei Ossipov): inquiry.
 
-> Include the ER Diagram of the database. 
-<img width="818" alt="Screenshot 2024-02-06 at 11 31 34" src="https://github.com/phuocnguyen2201/portfolio_project_php/assets/18252718/0e27a1bc-3c9c-4c10-8a23-f43c95e0eca7">
+> Include the ER Diagram of the database.
+
+![image](https://github.com/phuocnguyen2201/portfolio_project_php/assets/18252718/91f984df-310c-4981-addc-30eee7a1f398)
+
 
 ---
 
