@@ -53,14 +53,15 @@ Allow user to change password.
 List the database tables that are part of your project. 
 
 - Table 1 (Created By Phuoc): account
-- Table 2 (Created By Phuoc): users [MERGED within account table]
+- Table 2 (Created By Trang): users_info
 - Table 3 (Created By Phuoc): skills
 - Table 4 (Created By Phuoc): title [MERGED within account table]
 - Table 5 (Created By Aleksei Ossipov): inquiry.
 
 > Include the ER Diagram of the database.
 
-![image](https://github.com/phuocnguyen2201/portfolio_project_php/assets/18252718/91f984df-310c-4981-addc-30eee7a1f398)
+![image](https://github.com/phuocnguyen2201/portfolio_project_php/assets/18252718/6d6c1fbc-c5ee-493f-b916-3ed454faf125)
+
 
 
 ---
