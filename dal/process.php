@@ -24,61 +24,27 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-edit-information'])){
         include_once "update_information.php";
 
-        $receivedData       = $_GET['username'];
+        $receivedData       = isset($_GET['username'])? $_GET['username'] : '';
         $id                 = $_GET['id'];
+        $msg                = isset($_GET['msg'])? $_GET['msg'] : '';
         $first_name         = $_POST['firstname'];
         $last_name          = $_POST['lastname'];
         $description        = $_POST['description'];
         $title              = $_POST['title'];
 
-        update_info($receivedData, $id, $first_name, $last_name, $description, $title);
+        if($msg === ''){echo "msg is empty";}
+           // update_info($receivedData, $id, $first_name, $last_name, $description, $title);
+        else if($msg == 'new_user'){ echo "msg is new_user";}
+            // create_info($id, $first_name, $last_name, $description, $title);}
+           // create_info($id, $first_name, $last_name, $description, $title);
+        else
+            echo "Something went wrong!";
     } 
-
-    //For request from upload file form.
-    function render_image(){
-        if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['formFile'])){
-
-            $receivedData   = $_GET['username'];
-            $id             = $_GET['id'];
-            $alt            = $_POST['alt'];
-            $fileName       = $_FILES['file']['name'];
-            
-            $fileTmpName    = $_FILES['file']['tmp_name'];
-            $fileSize       = $_FILES['file']['size'];
-            $fileError      = $_FILES['file']['error'];
-            $fileType       = $_FILES['file']['type'];
-
-            $fileExt        = explode('.', $fileName);
-            $fileActualExt  = strtolower(end($fileExt));
-
-            $allowed        = array('jpg', 'jpeg', 'png');
-
-            if(in_array($fileActualExt, $allowed)){
-                if($fileError === 0){
-                    if($fileSize < 10000000){
-    
-                        $fileNameNew = "profile".$receivedData.".".$fileActualExt;
-                        $fileDestination = 'image/teams/'.$fileNameNew;
-                        
-                        if(move_uploaded_file($fileTmpName, $fileDestination)){
-                            exec_query(query_command::update_image_url($receivedData, $fileNameNew, urlencode($alt)));
-                        }
-                        
-                    } else {
-                        echo "Your file is too big!";
-                    }
-                } else {
-                    echo "There was an error uploading your file!";
-                }
-            } else {
-                echo "You cannot upload files of this type!";
-            }
-        }
-    }
 
     function render_info_form(){
         $receivedData = isset($_GET['username'])? $_GET['username'] : null;
-        if($receivedData != null){
+        $msg = isset($_GET['msg'])? $_GET['msg'] : '';
+        if($receivedData != null && $msg ==''){
             $name   = exec_select(query_command::query_user_info($receivedData));
             $skill  = exec_select(query_command::query_user_skill($receivedData));
             
@@ -165,7 +131,7 @@
                 <div class='form-group row pb-3'>
                     <label for='inputDescription' class='col-sm-3 col-form-label'>Description:</label>
                     <div class='col-sm-8'>
-                        <textarea class='form-control' id='inputDescription' rows='3'></textarea>
+                        <textarea class='form-control' name='description' id='inputDescription' rows='3'></textarea>
                     </div>
                 </div>";
 

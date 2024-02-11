@@ -10,6 +10,6 @@
     $img_url = "image/markus-spiske-PsRUMc7vilg-unsplash.jpg";
     $img_decs = "403 fobidden";
 
-    include "../extention/header.php"?>
+    include "../extension/header_error.php"?>
 
-<?php include "../extention/footer.php"?>
+<?php include "../extension/footer.php"?>

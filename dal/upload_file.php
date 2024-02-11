@@ -4,6 +4,8 @@ function upload_image(){
 
         $receivedData   = $_GET['username'];
         $id             = $_GET['id'];
+        $msg            = isset($_GET['msg']) ? $_GET['msg'] : '';
+
         $alt            = $_POST['alt'];
         $fileName       = $_FILES['file']['name'];
         
@@ -23,10 +25,17 @@ function upload_image(){
 
                     $fileNameNew = "profile".$receivedData.".".$fileActualExt;
                     $fileDestination = 'image/teams/'.$fileNameNew;
-                    
+
                     if(move_uploaded_file($fileTmpName, $fileDestination)){
-                        exec_query(query_command::update_image_url($receivedData, $fileNameNew, urlencode($alt)));
+                        if($msg == ''){
+                            exec_query(query_command::update_image_url($id, $fileNameNew, urlencode($alt)));
+                        }
+                        else if($msg == 'new_user'){
+                            exec_query(query_command::create_image_url($id, $fileNameNew, urlencode($alt)));
+                        }
                     }
+
+
                     
                 } else {
                     echo "Your file is too big!";

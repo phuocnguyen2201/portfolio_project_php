@@ -8,7 +8,7 @@
         $title = "500 Internal Server Error";
         $description = "500 Internal Server Error";
     }
-    include "extention/header_error.php";
+    include "extension/header_error.php";
 
-    include "extention/footer.php";
+    include "extension/footer.php";
 ?>
