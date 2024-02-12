@@ -1,5 +1,9 @@
 <?php
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-search'])){
+        header('Location: testing.php?msg=searched&');
+    }
+
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-change-password'])){
         include_once "account.php";
 
@@ -8,6 +12,7 @@
 
         update_accounpassword($username, $password);
     }
+
     //For request from login form.
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-login'])){
         include_once "../index.php";
