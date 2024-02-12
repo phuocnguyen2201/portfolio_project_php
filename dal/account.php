@@ -23,4 +23,14 @@
             header("Location: ../login.php?msg=existed");
         }
     }
+
+    function update_accounpassword($username, $password){
+        $flag = validate_account_exsited($username);
+        
+        if(!$flag)
+        {
+            exec_query(query_command::update_account_password($username, $password));
+            header("Location: ../login.php?msg=changed");
+        }
+    }
 ?>

@@ -1,4 +1,13 @@
 <?php
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-change-password'])){
+        include_once "account.php";
+
+        $username = isset($_COOKIE['user'])? $_COOKIE['user']:'';
+        $password = $_POST['confirmNewpassword'];
+
+        update_accounpassword($username, $password);
+    }
     //For request from login form.
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-login'])){
         include_once "../index.php";

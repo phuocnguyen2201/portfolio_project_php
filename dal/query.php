@@ -8,7 +8,9 @@
     public static function create_account($username, $password){
       return "INSERT INTO account (username, password) VALUES ('$username', '$password')";
     }
-
+    public static function update_account_password($username, $password){
+      return "UPDATE account SET password = '$password' WHERE username = '$username'";
+    }
     public static function create_user_info($id, $first_name, $last_name, $description, $title){
       return "INSERT INTO user_info (id, first_name, last_name, description, title) VALUES ('$id', '$first_name', '$last_name', '$description', '$title')";
     }

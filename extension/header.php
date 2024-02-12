@@ -57,7 +57,7 @@ crossorigin="anonymous"></script>
                                             <a href='#'>Hi! ".$_COOKIE['user']."</a>
                                             <div class='dropdown-content'>
                                                 <ul class='sub-menu' role='menu' aria-expanded='true'>
-                                                    <li role='menuitem'> <a class='dropdown-item' href='#'>Manage</a></li>
+                                                    <li role='menuitem'> <a class='dropdown-item' href='manage.php'>Manage</a></li>
                                                     <li role='menuitem'> <a class='dropdown-item' href='logout.php'>Logout</a></li>
                                                 </ul>
                                         </div>
