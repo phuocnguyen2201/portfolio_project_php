@@ -6,6 +6,7 @@
 
     $isNeedButton  = false;
     $img_url = "image/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg";
+    $img_desc = "A Workplace with a huge spaceious area.";
     include "extension/header.php"?>
         <div class="content-white">
       <div class="container-lg py-5">

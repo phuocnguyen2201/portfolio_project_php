@@ -7,7 +7,7 @@
     $isNeedButton  = false;
 
     $img_url = "image/jason-goodman-Oalh2MojUuk-unsplash.jpg";
-    $img_decs = "colleagues in a meeting";
+    $img_desc = "colleagues in a meeting";
     include "extension/header.php";
     include_once "dal/connection.php";
     include_once "dal/query.php";?>

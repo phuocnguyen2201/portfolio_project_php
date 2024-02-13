@@ -1,23 +1,14 @@
 <?php 
 
-    $title ='G6 | Portfolio';
-    $hero_title = "We are G6";
-    $description = "Welcome to G6! We are a passionate and dedicated team of IT student and professionals with a keen interest in software development.Our commitment to delivering high-quality results, coupled with a love for continuous learning, has driven our professional growth";
-
+    $title ='Contact us';
+    $hero_title = "Contact us";
+    $description = "We serve customers all around the world";
+    
+    $isNeedButton  = false;
+    $img_url = "image/Meeting_Image.jpg";
+    $img_desc = "Colleagues in a meeting.";
     include "extension/header.php"?>
-        <div class="content">   
-        <div class="container-lg py-5">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mt-5">
-                  <h1 class="title">Contact us</h1>
-                  <p>We serve customers all around the world</p>
-                </div>
-                <div class="col-lg-6 col-md-12 mb-4">
-                  <img class="img-thumbnail" alt="colleagues in a meeting" src="image/Meeting_Image.jpg">
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="content-white">
         <div class="container-lg py-5">
             <div class="row">
