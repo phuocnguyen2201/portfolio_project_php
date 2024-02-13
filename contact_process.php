@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
 }
 //connect to db
-include 'db.php';
+include 'contact_db.php';
 
 //write sql statement to insert data
 $sql = "insert into inquiry_data(email, name)
