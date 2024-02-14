@@ -27,12 +27,24 @@ function upload_image(){
                     $fileDestination = 'image/teams/'.$fileNameNew;
 
                     if(move_uploaded_file($fileTmpName, $fileDestination)){
-                        if($msg == ''){
-                            exec_query(query_command::update_image_url($id, $fileNameNew, urlencode($alt)));
+                        try{  
+                            $connection = connection();
+                            $connection->begin_transaction();
+                            if($msg == ''){
+                                execution_with_transaction(query_command::update_image_url($id, $fileNameNew, urlencode($alt)));
+                            }
+                            else if($msg == 'new_user'){
+                                execution_with_transaction(query_command::create_image_url($id, $fileNameNew, urlencode($alt)));
+                            }
+                            $connection->commit();
                         }
-                        else if($msg == 'new_user'){
-                            exec_query(query_command::create_image_url($id, $fileNameNew, urlencode($alt)));
+                        catch(Exception $e){
+                            echo $e->getMessage();
                         }
+                        finally{
+                            $connection->close();
+                        }
+                      
                     }
 
 

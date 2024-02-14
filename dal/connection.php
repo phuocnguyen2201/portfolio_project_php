@@ -20,7 +20,11 @@ function connection(){
         echo $e->getMessage();
     }
 }
-
+function execution_with_transaction($query){
+    if(connection()->query($query) !== true){
+        echo "Error: " . $query . "<br>" . connection()->error;
+    }
+}
 function exec_query($query){
     if(connection()->query($query) !== true){
         echo "Error: " . $query . "<br>" . connection()->error;
