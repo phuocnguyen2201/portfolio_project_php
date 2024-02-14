@@ -19,32 +19,35 @@ In this section, list and describe the features or functionality that you are wo
 - [x] Login  (Phuoc): Login and logout. 
 - [x] Manage information (Phuoc).
 - [x] Manage inquiry information (Aleksei Ossipov).
-- [ ] Create account (Trang).
+- [x] Create account (Trang).
 - [ ] Update account (Sieng).
-- [ ] Search (Draft, if times is allowed us, we will do).
+- [ ] Search users (Phuoc).
 
 > Add features as required. 
 
-### Login
+- ### 1. Login
 
 Login and logout: using cookie.
 
-### Manage information
+- ### 2. Manage information
 
 Edit team member information on team page.
 
-### Manage inquiry information
+- ### 3. Manage inquiry information
 
-- Client send information.
-- View information sent by client.
+Client send information.
+View information sent by client.
 
-### Create account.
+- ### 4. Create account.
 
 Create new account for new member.
 
-### Update account.
+- ### 5. Update account.
 
 Allow user to change password.
+- ### 6. Search users.
+
+Search users with name or skills.
 
 ---
 
