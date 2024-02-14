@@ -55,7 +55,7 @@
                 else if($name == "" && ($option == "Coding" || $option == "Planning" || $option == "Design" || $option== "Game Design"))
                     $result = exec_select(query_command::search_user($name, $option, "OR"));
                 else
-                    $result = exec_select(query_command::search_user($name, $option, "AND"));
+                    $result = exec_select(query_command::search_user("%"+$name+"%", $option, "AND"));
 
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){

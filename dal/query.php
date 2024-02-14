@@ -6,7 +6,7 @@
     public static $select_All_Account = "SELECT * FROM account inner join user_info ON account.id = user_info.id;";
 
     public static function search_user($first_name, $skills, $operation){
-      return "SELECT DISTINCT account.username FROM user_info INNER JOIN account ON account.id = user_info.id JOIN acc_skills on acc_skills.acc_id = account.id JOIN skills ON skills.id = acc_skills.skill_id WHERE user_info.first_name LIKE '%$first_name%' $operation skills.s_name IN ('$skills')";
+      return "SELECT DISTINCT account.username FROM user_info INNER JOIN account ON account.id = user_info.id JOIN acc_skills on acc_skills.acc_id = account.id JOIN skills ON skills.id = acc_skills.skill_id WHERE user_info.first_name LIKE '$first_name' $operation skills.s_name IN ('$skills')";
     }
     public static function search_user_by_skill($skills){
       return "SELECT DISTINCT account.username FROM user_info INNER JOIN account ON account.id = user_info.id JOIN acc_skills on acc_skills.acc_id = account.id JOIN skills ON skills.id = acc_skills.skill_id WHERE skills.s_name IN ('$skills')";

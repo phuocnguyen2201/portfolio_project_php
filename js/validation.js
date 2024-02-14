@@ -39,12 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
         {  
             passwordAlert.style.display = 'none';
 
-            passField.addEventListener("focus", () => {
-                passField.style.display = 'unset';
-                passField.style.borderColor = 'black';
-                passField.required = true;
-            });
-
             passField.addEventListener("blur", () => {
                 passField.style.display = 'unset';
                 passField.style.borderColor = '#ced4da';
