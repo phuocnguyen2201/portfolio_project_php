@@ -1,8 +1,6 @@
 <?php
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-search'])){
-        header('Location: testing.php?msg=searched&');
-    }
+
 
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-change-password'])){
         include_once "account.php";
@@ -12,6 +10,7 @@
 
         update_accounpassword($username, $password);
     }
+
 
     //For request from login form.
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-login'])){
@@ -37,7 +36,7 @@
     //For request from edit form.
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form-edit-information'])){
         include_once "update_information.php";
-
+        
         $receivedData       = isset($_GET['username'])? $_GET['username'] : '';
         $id                 = $_GET['id'];
         $msg                = isset($_GET['msg'])? $_GET['msg'] : '';
@@ -45,20 +44,17 @@
         $last_name          = $_POST['lastname'];
         $description        = $_POST['description'];
         $title              = $_POST['title'];
-
-        if($msg === ''){echo "msg is empty";}
-           // update_info($receivedData, $id, $first_name, $last_name, $description, $title);
-        else if($msg == 'new_user'){ echo "msg is new_user";}
-            // create_info($id, $first_name, $last_name, $description, $title);}
-           // create_info($id, $first_name, $last_name, $description, $title);
-        else
-            echo "Something went wrong!";
+        
+        if($msg === '')
+            update_info($receivedData, $id, $first_name, $last_name, $description, $title);
+        else if($msg == 'new_user')
+            create_info($id, $first_name, $last_name, $description, $title);
     } 
 
     function render_info_form(){
         $receivedData = isset($_GET['username'])? $_GET['username'] : null;
         $msg = isset($_GET['msg'])? $_GET['msg'] : '';
-        if($receivedData != null && $msg ==''){
+        if($receivedData != null && $msg == ''){
             $name   = exec_select(query_command::query_user_info($receivedData));
             $skill  = exec_select(query_command::query_user_skill($receivedData));
             

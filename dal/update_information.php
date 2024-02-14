@@ -10,7 +10,8 @@
                 exec_query(query_command::update_user_skill(intval($id), $i));
             }
         }
-        exec_query(query_command::update_user_info($username, $first_name, $last_name, urlencode($description), $title));
+        exec_query(query_command::update_user_info($id, $first_name, $last_name, urlencode($description), $title));
+        header("Location: ../modify.php?username=$username&id=$id");
 
     }
     function create_info($id, $first_name, $last_name, $description, $title){

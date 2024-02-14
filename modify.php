@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="row">
-                    <form class='py-3' action="dal/process.php?msg=<?php echo $msg?>&id=<?php echo $id?>" name='form-edit-information' method='POST'>
+                    <form class='py-3' action="dal/process.php?msg=<?php echo $msg?>&username=<?php echo $receivedData?>&id=<?php echo $id?>" name='form-edit-information' method='POST'>
                         <?php 
                             render_info_form();
                         ?>

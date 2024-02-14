@@ -19,11 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         else {
             usernameAlert.style.display = 'none';
-            userField.addEventListener("focus", () => {
-                userField.style.display = 'unset';
-                userField.style.borderColor = 'black';
-                userField.required = true;
-            });
             userField.addEventListener("blur", () => {
                 userField.style.display = 'unset';
                 userField.style.borderColor = '#ced4da';

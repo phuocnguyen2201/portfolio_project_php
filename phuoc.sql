@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 11, 2024 at 01:14 PM
+-- Generation Time: Feb 14, 2024 at 08:36 PM
 -- Server version: 8.0.34
 -- PHP Version: 8.2.8
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `phuoc`
+-- Database: `crud_app`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,8 @@ INSERT INTO `account` (`id`, `username`, `password`) VALUES
 (2, 'trang23000', '123'),
 (11, 'alex23000', '123'),
 (13, 'sfsaf', '33333'),
-(20, 'sieng23000', '123');
+(20, 'sieng23000', '123'),
+(21, 'phuoc222', '123');
 
 -- --------------------------------------------------------
 
@@ -62,9 +63,11 @@ CREATE TABLE `acc_skills` (
 
 INSERT INTO `acc_skills` (`id`, `acc_id`, `skill_id`) VALUES
 (24, 2, 1),
-(31, 1, 1),
-(32, 1, 2),
-(37, 11, 1);
+(37, 11, 1),
+(71, 21, 1),
+(83, 1, 1),
+(84, 1, 2),
+(85, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -94,7 +97,7 @@ INSERT INTO `skills` (`id`, `s_name`) VALUES
 --
 
 CREATE TABLE `user_info` (
-  `id` int NOT NULL,
+  `id` int DEFAULT NULL,
   `first_name` varchar(100) DEFAULT NULL,
   `last_name` varchar(100) DEFAULT NULL,
   `title` varchar(100) DEFAULT NULL,
@@ -109,8 +112,8 @@ CREATE TABLE `user_info` (
 
 INSERT INTO `user_info` (`id`, `first_name`, `last_name`, `title`, `image_url`, `description`, `alt_text`) VALUES
 (1, 'Phuoc', 'Nguyen', 'Team Lead, Developer', 'profilephuoc23000.jpg', 'Currently%2C+I%27m+a+student+seeking+my+first+degree+besides+some+certificate+related+to+the+IT+domain.+Moreover%2C+I%27m+looking+for+a+remote%2Fhybrid+job%2C+so+don%27t+hesitate+to+reach+me.', 'phuoc%27s+portrait'),
-(2, 'Trang', 'vo', 'student', 'trang.jpg', 'Previous a travel agency, looking for opportunity in software development', 'dfdf'),
-(20, NULL, NULL, NULL, 'profilesieng23000.jpg', NULL, 'Sieng%27s+Portrait');
+(2, 'Trang', 'vo', 'student', 'profiletrang23000.jpg', 'Previous a travel agency, looking for opportunity in software development', 'Trang%27s+Portrait'),
+(21, NULL, NULL, NULL, 'profilephuoc222.jpg', NULL, 'alex');
 
 --
 -- Indexes for dumped tables
@@ -140,7 +143,7 @@ ALTER TABLE `skills`
 -- Indexes for table `user_info`
 --
 ALTER TABLE `user_info`
-  ADD PRIMARY KEY (`id`);
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -150,13 +153,13 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `acc_skills`
 --
 ALTER TABLE `acc_skills`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT for table `skills`

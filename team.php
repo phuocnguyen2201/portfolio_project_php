@@ -20,7 +20,7 @@
                         <div class="form-group row pb-3"> 
                             <div class="col-sm-5"> 
                                 <select class="form-select" name="option_value" aria-label="Skills option select box">
-                                    <option value ='0' selected>Open this select menu</option>
+                                    <option value ='0' selected>All skills</option>
                                     <?php
                                         
                                         $result_skills= exec_select(query_command::$select_All_Skills);
@@ -49,7 +49,13 @@
 
                 $name = isset($_POST['search_input'])? $_POST['search_input'] : "";
                 $option = $_POST['option_value'] == '0'? "Coding', 'Planning', 'Design', 'Game Design": $_POST['option_value'];
-                $result = exec_select(query_command::search_user($name, $name, $option));
+
+                if($name == "" && $option == "Coding', 'Planning', 'Design', 'Game Design")
+                    $result = exec_select(query_command::$select_All_Account);
+                else if($name == "" && ($option == "Coding" || $option == "Planning" || $option == "Design" || $option== "Game Design"))
+                    $result = exec_select(query_command::search_user($name, $option, "OR"));
+                else
+                    $result = exec_select(query_command::search_user($name, $option, "AND"));
 
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
