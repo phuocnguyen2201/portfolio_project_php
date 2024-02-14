@@ -19,7 +19,7 @@ In this section, list and describe the features or functionality that you are wo
 - [x] Login  (Phuoc): Login and logout. 
 - [x] Manage information (Phuoc).
 - [x] Manage inquiry information (Aleksei Ossipov).
-- [ ] Create account (Trang).
+- [x] Create account (Trang).
 - [ ] Update account (Sieng).
 - [ ] Search users (Phuoc).
 
