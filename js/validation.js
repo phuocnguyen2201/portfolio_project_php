@@ -56,12 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
             validateForm();
         });
 
-        formLogin.addEventListener('keydown', function(event){
-            if(event.keyCode == 9 || event.key == "Tab"){
-                validateForm();
-            }
-        });
-
     }
 
 
