@@ -55,7 +55,7 @@
                 else if($name == "" && ($option == "Coding" || $option == "Planning" || $option == "Design" || $option== "Game Design"))
                     $result = exec_select(query_command::search_user($name, $option, "OR"));
                 else
-                    $result = exec_select(query_command::search_user("%"+$name+"%", $option, "AND"));
+                    $result = exec_select(query_command::search_user("%".$name."%", $option, "AND"));
 
                 if($result->num_rows > 0){
                     while($row = $result->fetch_assoc()){
@@ -200,5 +200,18 @@
             }
             ?>
         </div>
+    </div>
+    <div class="content-orange">
+      <div class="container-lg py-5 text-center">
+        <div class="row">
+            <h1 class="title pb-5"> Other ways to reach our team member</h1>
+        </div>
+        <div class="row pb-3">
+            <div class="col-lg-3 col-sm-3"><a href="#"><img class="square-social-logo" alt="Instagram's logo" src="image/favicon_io/instagram_icon.png"></a></div>
+            <div class="col-lg-3 col-sm-3"><a href="#"><img class="square-social-logo" alt="Facebook's logo" src="image/favicon_io/facebook_icon.png"></a></div>
+            <div class="col-lg-3 col-sm-3"><a href="#"><img class="square-social-logo" alt="Linkedin's logo" src="image/favicon_io/linkedin_icon.png"></a></div>
+            <div class="col-lg-3 col-sm-3"><a href="https://github.com/phuocnguyen2201/portfolio_project_php"><img class="square-social-logo" alt="Github's logo" src="image/favicon_io/github_icon.png"></a></div>
+        </div>
+      </div>
     </div>
 <?php include_once "extension/footer.php"?>
