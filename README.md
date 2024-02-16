@@ -21,7 +21,7 @@ In this section, list and describe the features or functionality that you are wo
 - [x] Manage inquiry information (Aleksei Ossipov).
 - [x] Create account (Trang).
 - [x] Update account (Sieng).
-- [ ] Search users (Phuoc).
+- [x] Search users (Phuoc).
 
 > Add features as required. 
 
